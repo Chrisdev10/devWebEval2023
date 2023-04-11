@@ -1,0 +1,72 @@
+#connect {
+  border: 0;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8D2CDD;
+  transition: all 0.2s ease-in-out;
+}
+
+#connect:hover {
+  background-color: #F40099;
+  box-shadow: 0 0.5em 0.5em -0.4em #F40099;
+  transform: translateY(-0.25em);
+}
+
+.sign-in {
+  color: white !important;
+  border: 0;
+  height: 40px;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8D2CDD;
+  transition: all 0.2s ease-in-out;
+}
+.sign-in:hover {
+  background-color: #F40099;
+  box-shadow: 0 0.5em 0.5em -0.4em #F40099;
+}
+
+.sign-up {
+  color: #ffffff !important;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8D2CDD;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.sign-up:hover {
+  background-color: transparent;
+  border: 1px solid #F40099;
+}
+
+.submit_btn {
+  position: absolute;
+  border: 0;
+  border-radius: 20px;
+  background-color: #F40099;
+  width: 80px;
+  height: 40px;
+  right: 0;
+  top: -2px;
+  z-index: 11;
+}
+
+.formcustom {
+  background-color: #8D2CDD;
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  color: white;
+}
+.formcustom > option {
+  background-color: #8D2CDD;
+  border-radius: 15px;
+  padding: 2px 3px;
+}
+.formcustom:hover {
+  border-top-left-radius: 10px;
+  background-color: #8D2CDD;
+}

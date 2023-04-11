@@ -1,0 +1,125 @@
+#myTopnav {
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #333;
+  z-index: 10000;
+  transition: all 0.3s;
+}
+
+.nav-wrapper > a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 40px;
+}
+
+.nav-wrapper > a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.nav-wrapper{
+  display: flex;
+  width: 100%;
+}
+
+.nav-wrapper a.icon {
+  display: none;
+}
+
+#logo{
+  width: 40px;
+  top: 9px;
+}
+#ext_btn{
+  display: none;
+}
+.submit_btn {
+  position: absolute;
+  border: 0;
+  border-radius: 20px;
+  background-color: #F40099;
+  width: 60px;
+  height: 40px;
+  right: -12;
+  top: -2px;
+  z-index: 11;
+}
+.research{
+  width: 322px;
+  height: 38px;
+  border-radius: 15px;
+  padding: 0.3rem 3rem;
+  border: 2px solid #F40099;
+  z-index: 10;
+  position: relative;
+  background-color: #292929;
+  color: aliceblue;
+  outline: none;
+}
+/* .research:focus + #search_sub{
+  transform: translateY(30%) scale(1.1);
+  transition: all 0.4s ease;
+} */
+.searchbar {
+  width: 322px;
+  height: 38px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-top: 12px !important;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+ @media screen and (max-width: 800px) {
+  .searchbar {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  .research{
+    width: 90%;
+  }
+  .nav-wrapper{
+    position: absolute;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    left: -100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-wrapper.responsive{
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  #cross{
+    width: 35px;
+  }
+  #ext_btn{
+    font-size: 30px;
+    color: white;
+    display: block;
+    margin: 10px;
+  }
+  .nav-wrapper a.icon {
+    display: block;
+    width: 80px;
+  }
+  .icon{
+    width: 50px;
+    font-size: 50px;
+    color: white;
+  }
+}
+
+.fader{
+  background-color: transparent !important;
+  transition: all 0.3s;
+}

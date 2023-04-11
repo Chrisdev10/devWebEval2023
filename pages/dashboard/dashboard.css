@@ -1,0 +1,253 @@
+/* COLORS */
+.searchbar {
+  width: 322px;
+  height: 38px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.sign {
+  color: white !important;
+  position: relative;
+  border-radius: 10px;
+  background-color: #292929;
+  box-shadow: -2px 2px 20px 2px #F40099;
+  padding: 2rem;
+  margin: 200px auto;
+  max-width: 550px;
+}
+.sign::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background-color: #8D2CDD;
+  bottom: -20px;
+  left: -20px;
+  transition: all 0.5s ease-in-out;
+}
+.sign::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #F40099;
+  bottom: -10px;
+  left: -10px;
+  transition: all 0.5s ease-in-out;
+}
+.sign:hover::before {
+  bottom: -40px;
+  left: -40px;
+}
+.sign:hover::after {
+  bottom: -20px;
+  left: -20px;
+}
+
+@media (max-width: 600px) {
+  .sign {
+    width: 90%;
+  }
+  .sign::before {
+    left: 0;
+    bottom: -20px;
+  }
+  .sign::after {
+    left: 0;
+    bottom: -10px;
+  }
+  .sign:hover::before {
+    left: 0;
+    bottom: -20px;
+  }
+  .sign:hover::after {
+    left: 0;
+    bottom: -10px;
+  }
+}
+@media (max-width: 500px) {
+  .searchbar {
+    width: 90%;
+  }
+}
+#connect {
+  border: 0;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8D2CDD;
+  transition: all 0.2s ease-in-out;
+}
+
+#connect:hover {
+  background-color: #F40099;
+  box-shadow: 0 0.5em 0.5em -0.4em #F40099;
+  transform: translateY(-0.25em);
+}
+
+.sign-in {
+  color: white !important;
+  border: 0;
+  height: 40px;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8D2CDD;
+  transition: all 0.2s ease-in-out;
+}
+.sign-in:hover {
+  background-color: #F40099;
+  box-shadow: 0 0.5em 0.5em -0.4em #F40099;
+}
+
+.sign-up {
+  color: #ffffff !important;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8D2CDD;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.sign-up:hover {
+  background-color: transparent;
+  border: 1px solid #F40099;
+}
+
+.submit_btn {
+  position: absolute;
+  border: 0;
+  border-radius: 20px;
+  background-color: #F40099;
+  width: 80px;
+  height: 40px;
+  right: 0;
+  top: -2px;
+  z-index: 11;
+}
+
+.formcustom {
+  background-color: #8D2CDD;
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  color: white;
+}
+.formcustom > option {
+  background-color: #8D2CDD;
+  border-radius: 15px;
+  padding: 2px 3px;
+}
+.formcustom:hover {
+  border-top-left-radius: 10px;
+  background-color: #8D2CDD;
+}
+
+.font {
+  font-weight: bold;
+}
+
+.personnal {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.infop {
+  display: flex;
+  width: 90% !important;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  grid-column: 1/span 2;
+  background-color: #333333;
+  border-radius: 15px;
+  padding: 15px;
+  align-self: flex-start;
+  text-align: center;
+}
+
+.order-list {
+  border-top: 1px solid #8D2CDD;
+}
+
+.order {
+  display: flex;
+  background-color: #333333;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.order > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.sep {
+  border-right: 2px solid #8D2CDD;
+}
+
+.order > div > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.license {
+  filter: blur(5px);
+}
+
+#blur {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.payInfo {
+  border-top: 1px solid #8D2CDD;
+}
+.payInfo > div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+  .sep {
+    border: 0px;
+  }
+  .order > div {
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+  .order > div:not(:last-child) {
+    border-bottom: 1px solid #8D2CDD;
+  }
+  .order > div > span:last-child {
+    font-size: 15px;
+    overflow-y: scroll;
+  }
+  .order > div > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .infop {
+    flex-direction: column;
+  }
+  span[id^=blurBtn] {
+    font-size: 10px;
+  }
+}

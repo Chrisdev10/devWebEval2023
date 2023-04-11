@@ -1,0 +1,12 @@
+.hack {
+  width: 100vw;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
+}
+
+@media (max-width: 600px) {
+  .hack {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}

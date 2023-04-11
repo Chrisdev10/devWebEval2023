@@ -1,0 +1,31 @@
+@use '../../styles/font' as f;
+@use '../../styles/global' as c;
+#service-banner{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: c.$dark-grey;
+    height: 140px;
+    margin: 4rem 0;
+    position: relative;
+}
+.line-banner{
+    width: 2px;
+    height: 80%;
+    background-color: c.$violet-blue;
+}
+.service-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.service-inner>img{
+    width: 50px;
+}
+.service-inner>p{
+    color: white;
+    margin-bottom: 0 !important;
+}

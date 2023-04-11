@@ -1,0 +1,99 @@
+@use 'styles/global' as c;
+@use 'styles/button' as btn;
+.font{
+    font-weight: bold;
+}
+.personnal{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.infop{
+    display: flex;
+    width: 90% !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+// .parent{
+//     display: grid;
+//     grid-template-columns: repeat(2,1fr);
+//     grid-template-rows: repeat(3,1fr);
+// }
+
+.title{
+    grid-column: 1 / span 2;
+    background-color: c.$light-grey;
+    border-radius: 15px;
+    padding: 15px;
+    align-self:  flex-start;
+    text-align: center;
+}
+
+.order-list{
+    border-top: 1px solid c.$violet-blue;
+    // grid-column: 1 / span 2;
+}
+.order{
+    display: flex;
+    background-color: c.$light-grey;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 20px;
+}
+.order > div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.sep{
+    border-right: 2px solid c.$violet-blue;
+}
+.order > div > span{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.license{
+    filter: blur(5px);
+}
+#blur{
+    width: 150px;
+    margin: 0 auto;
+}
+.payInfo{
+    border-top: 1px solid c.$violet-blue;
+    & > div{
+        display: flex;  
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:900px){
+    .sep{
+        border: 0px;
+    }
+    .order > div{
+        flex-direction: column;
+        margin: 0 1rem;
+        &:not(:last-child){
+            border-bottom: 1px solid c.$violet-blue;
+        }
+    }
+    .order > div > span:last-child{
+        font-size: 15px;
+        overflow-y: scroll;
+    }
+    .order > div > span{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+@media screen and (max-width:500px){
+    .infop{
+        flex-direction: column;
+    }
+    span[id^='blurBtn']{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poppins:wght@300&family=Roboto:ital,wght@0,400;1,100&display=swap");
+/* COLORS */
+.searchbar {
+  width: 322px;
+  height: 38px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.sign {
+  color: white !important;
+  position: relative;
+  border-radius: 10px;
+  background-color: #292929;
+  box-shadow: -2px 2px 20px 2px #F40099;
+  padding: 2rem;
+  margin: 200px auto;
+  max-width: 550px;
+}
+.sign::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background-color: #8D2CDD;
+  bottom: -20px;
+  left: -20px;
+  transition: all 0.5s ease-in-out;
+}
+.sign::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #F40099;
+  bottom: -10px;
+  left: -10px;
+  transition: all 0.5s ease-in-out;
+}
+.sign:hover::before {
+  bottom: -40px;
+  left: -40px;
+}
+.sign:hover::after {
+  bottom: -20px;
+  left: -20px;
+}
+
+@media (max-width: 600px) {
+  .sign {
+    width: 90%;
+  }
+  .sign::before {
+    left: 0;
+    bottom: -20px;
+  }
+  .sign::after {
+    left: 0;
+    bottom: -10px;
+  }
+  .sign:hover::before {
+    left: 0;
+    bottom: -20px;
+  }
+  .sign:hover::after {
+    left: 0;
+    bottom: -10px;
+  }
+}
+@media (max-width: 500px) {
+  .searchbar {
+    width: 90%;
+  }
+}
+#service-banner {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #292929;
+  height: 140px;
+  margin: 4rem 0;
+  position: relative;
+}
+
+.line-banner {
+  width: 2px;
+  height: 80%;
+  background-color: #8D2CDD;
+}
+
+.service-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.service-inner > img {
+  width: 50px;
+}
+
+.service-inner > p {
+  color: white;
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,120 @@
+@use '../../styles/global' as c;
+@use '../../styles/font' as font;
+.gamecard {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;    
+  &:hover{
+    & .image{
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      bottom: 9.8px;
+      transition: 0.4s ease-in-out;
+
+    }
+    & .image1{
+      bottom: 10px;
+    }
+    
+  }
+} 
+.image {
+  position: absolute;
+  bottom: 0;
+  width: 320px;
+  height: auto;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.image2, .image0{
+  left: 12%;
+}
+.image3{
+  left: 18%;
+}
+.image4{
+  left: 6%;
+}
+.image5{
+  left: -1%;
+}
+
+.title-cat{
+  position: absolute;
+  z-index: 1000;
+  color: white;
+  font-family: font.$game-font;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.2rem;
+  text-shadow:
+    0 0 8px c.$violet-blue,
+    0 0 10px c.$violet-blue,
+    0 0 7px #fff,
+    0 0 7px c.$violet-blue,
+    0 0 7px c.$violet-blue;
+}
+.parent{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media (max-width:600px){
+  .image{
+      width: 170px;
+  }
+  .gamecard{
+      width: 160px;
+      height: 110px;
+  }
+  .title-cat{
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .gamecard:hover .image {
+    transform: none;
+    bottom: 0;
+  }
+}
+.title{
+  text-align: center;
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.wrapper{
+  display: grid;
+  width: 500px;
+  max-height: 600px;
+  background-color: transparent;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(3,100px);
+  row-gap: 4rem;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto 150px;
+}
+.box{
+  width: 300px;
+  // height: 200px;
+}
+
+@media (min-width:1200px){
+  .wrapper{
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(2,1fr);
+      width: 1200px;
+  }
+}
+
+@media (min-width:600px) and (max-width:1200px){
+  .wrapper{
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(3,200px);
+      width: 800px;
+  }
+}

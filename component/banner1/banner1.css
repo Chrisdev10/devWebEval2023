@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poppins:wght@300&family=Roboto:ital,wght@0,400;1,100&display=swap');
+#slogan1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-image: url("/mist/assets/bannertest.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 330px;
+  margin: 4rem 0;
+  position: relative;
+}
+
+.banner1texte {
+  position: relative;
+  color: white;
+  font-size: 27px;
+  font-family: "Poppins", sans-serif;
+}
+
+.trust {
+  max-width: 38rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.stars {
+  width: 40px;
+}
+
+.perk-csgo {
+  max-width: 250px;
+  align-self: flex-end;
+}
+
+@media (max-width: 900px) {
+  .perk-csgo {
+    display: none;
+  }
+  .trust {
+    width: 80%;
+  }
+  .banner1texte {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=banner1.component.css.map */

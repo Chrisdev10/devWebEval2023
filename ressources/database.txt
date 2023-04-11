@@ -1,0 +1,51 @@
+CREATE TABLE GAME(
+	id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),
+	price FLOAT NOT NULL,
+	promotion INT,
+	imageUrl VARCHAR(30) NOT NULL,
+	title VARCHAR(50) NOT NULL,
+	releaseDate DATE,
+	genres VARCHAR(100),
+	developer VARCHAR(30),
+	editor VARCHAR(30),
+	PRIMARY KEY(id)
+);    
+
+INSERT INTO GAME(PRICE,PROMOTION,IMAGEURL,TITLE,RELEASEDATE,GENRES,DEVELOPER,EDITOR) VALUES
+(59.99,20,'https://bit.ly/3tzE0AN','Forza Horizon 5','2021-11-08','SPORTS','Playground Games','Xbox Game Studios'),
+(39.99,0,'https://bit.ly/3tUTyiP','Transport Fever 2','2019-12-11','STRATEGY,SOLO','Urban Games','Good Shepherd Entertainment'),
+(29.99,0,'https://bit.ly/3aY8E0d','Subnautica','2018-01-23','INDIE,ADVENTURE,VR','Unknown Worlds Entertainment','Unknown Worlds Entertainment'),
+(39.99,0,'https://bit.ly/3tUTyiP','Transport Fever 2','2019-12-11','STRATEGY,SOLO','Urban Games','Good Shepherd Entertainment'),
+(39.99,0,'https://bit.ly/3zDxAUW','Hell Let Loose','2021-07-27','ACTION,SOLO,MULTI,FPS','Black Matter Pty Ltd','Team17'),
+(39.99,0,'https://bit.ly/3xIW1im','Call of Duty: Black Ops','2010-11-08','ACTION,FPS','Treyarch','Activision'),
+(39.99,0,'https://bit.ly/3xJqgpl','Assassin''s Creed Black Flag - Gold Edition','2013-11-19','ACTION,ADVENTURE','Ubisoft Montreal','Ubisoft'),
+(19.99,75,'https://bit.ly/3xJqnBh','DOOM','2016-05-12','ACTION,SOLO,MULTI,FPS,SCIENCEFICTION','id Software','Bethesda Softworks'),
+(8.99,40,'https://bit.ly/3mFHMVg','Chivalry 2 - Special Edition','2022-06-12','ACTION','Torn Banner Studios','Tripwire Presents'),
+(29.99,67,'https://bit.ly/3HhdVvM','Deep Rock Galactic','2020-05-13','ACTION,MULTI,FPS','Coffee Stain Publishing','Coffee Stain Publishing'),
+(16.79,10,'https://bit.ly/3xrBn5a','Builder Simulator','2022-06-09','INDIE,ADVENTURE,STRATEGY','Live Motion Games','Live Motion Games'),
+(25,0,'https://bit.ly/39nYHsk','Factorio','2020-08-14','INDIE,STRATEGY','Wube Software LTD.','Wube Software LTD.'),
+(29.99,0,'https://bit.ly/3aY8E0d','Subnautica','2018-01-23','INDIE,ADVENTURE,VR','Unknown Worlds Entertainment','Unknown Worlds Entertainment'),
+(59.99,20,'https://bit.ly/3tzNmMN','ELDEN RING','2022-02-25','ACTION,RPG','FromSoftware Inc.','FromSoftware Inc.'),
+(59.99,0,'https://bit.ly/3HjOmuj','Dying Light 2','2022-02-04','ACTION,ADVENTURE,RPG','Techland','Techland');
+   
+CREATE TABLE USER(
+	id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),
+	lastName VARCHAR(30) NOT NULL,
+	firstName VARCHAR(30) NOT NULL,
+	birthDate DATE NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	phone INT,
+	userName VARCHAR(30) NOT NULL,
+	passWord VARCHAR(40) NOT NULL,
+	PRIMARY KEY(id)
+);   
+insert into USER (lastName, firstName, birthDate, email, userName, passWord) values ('Durling', 'Adèle', '1992-04-02', 'cdurling1d@cbc.ca', 'chrisdev', 'qwerty');
+CREATE TABLE ORDER(
+	id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1),
+	user_id INT NOT NULL,
+	game_id INT NOT NULL,
+	game_license VARCHAR(100) NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY (user_id) REFERENCES user(id),
+	FOREIGN KEY (game_id) REFERENCES game(id)
+)
