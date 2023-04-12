@@ -28,7 +28,7 @@
             $promo = $row['PROMOTION'];
         ?>
         <div class="center-card">
-            <a href="/mist/details.php?id=<?php echo $row['ID']; ?>">
+            <a href="/mist/pages/game-details/game-details.php?id=<?php echo $row['ID']; ?>">
                 <div class="main-card" style="background-image: url('<?php echo $row['IMAGEURL']; ?>')">
                     <?php if($promo != 0){ ?>
                     <div class="promo-icon">

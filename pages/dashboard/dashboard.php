@@ -70,5 +70,5 @@
 			  crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2c684a3113.js" crossorigin="anonymous"></script>
     <script src="/mist/component/navbar/navbar.js"></script>
-    <script src="/mist/dashboard.js"></script>
+    <script src="/mist/pages/dashboard/dashboard.js"></script>
 </html>
