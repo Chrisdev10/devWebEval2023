@@ -7,6 +7,6 @@
     }else{
         $res = get_user($_SESSION['user_id']);  
         buy_game($res['ID'], $game_id);
-        header("Location: /mist/dashboard.php");
+        header("Location: /mist/pages/dashboard/dashboard.php");
     }
 ?>
