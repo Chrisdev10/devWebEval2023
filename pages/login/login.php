@@ -1,13 +1,6 @@
 <html>
     <head>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="/mist/styles/global.css">
-      <link rel="stylesheet" href="/mist/styles/button.css">
-      <link rel="stylesheet" href="/mist/index.css">
-      <link rel="stylesheet" href="/mist/component/header/header.css">
-      <link rel="stylesheet" href="/mist/component/navbar/navbar.css">   
-      <link rel="stylesheet" href="/mist/component/footer/footer.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+      <?php include '../../helper/css.php' ?>
     </head>
     <body style="background-color: #333333">
       <?php include '../../component/navbar/navbar.php' ?>

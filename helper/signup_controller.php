@@ -1,5 +1,5 @@
 <?php
-    require_once(__DIR__.'/../database.php');
+    require_once('../database.php');
     $last_name = $_POST['lastname'];
     $first_name = $_POST['firstname'];
     $birthdate = $_POST['birthdate'];
@@ -8,6 +8,6 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
     add_user($last_name,$first_name,$birthdate,$email,$phone,$username,$password);
-    header("Location: /mist/login.php");
+    header("Location: /mist/pages/login/login.php");
 
 ?>

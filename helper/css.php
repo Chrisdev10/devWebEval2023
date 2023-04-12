@@ -1,6 +1,7 @@
 <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/mist/index.css">
+      <link rel="stylesheet" href="/mist/styles/button.css">
       <link rel="stylesheet" href="/mist/component/header/header.css">
       <link rel="stylesheet" href="/mist/component/navbar/navbar.css">  
       <link rel="stylesheet" href="/mist/component/game_card/game-card.css"> 
