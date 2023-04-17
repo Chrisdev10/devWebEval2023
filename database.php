@@ -44,6 +44,10 @@
         $stmt = db2_prepare($conn, $sql);
         db2_execute($stmt, array('000010'));
     }
+    function get_most_recent_games(){
+        $sql = "SELECT * FROM game as g ORDER BY g.releasedate DESC LIMIT 6";
+        return execute_query($sql);
+    }
     function get_all_buy_game($user){
         $sql = "SELECT * FROM order as o JOIN game as g on g.id = o.game_id WHERE o.user_id = ".$user;
         return execute_query($sql);

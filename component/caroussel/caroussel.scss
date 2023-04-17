@@ -1,0 +1,52 @@
+@use '../../styles/global' as c;
+.c-wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: c.$dark-grey;
+}
+#carousselID{
+    display: flex;
+    width: 800px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    border-radius: 15px;
+}
+.caroussel > div {
+    min-width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+    padding: 15px;
+}
+.leftItem{
+    opacity: 0.4;
+    transform: scale(0.6) translateX(50px);
+    transition: all 1s ease;
+}
+.rightItem{
+    opacity: 0.4;
+    transform: scale(0.6) translateX(-50px);
+    transition: all 1s ease;
+}
+.switcher{
+    display: flex;
+    position: absolute;
+    bottom: 10;
+    width: inherit;
+    justify-content: center;
+    & > span{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: c.$violet-blue;
+        margin: 0 5px;
+        cursor: pointer;
+
+    }
+    & :first-child{
+        background-color: c.$pink;
+    }
+}

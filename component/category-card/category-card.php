@@ -5,7 +5,7 @@
 <div class="parent">
     <div class="wrapper">
     <?php for($counter = 0; $counter < 6; $counter++){ ?>
-        <a href="/mist/research.php?genre=<?php echo $genres[$counter]; ?>">
+        <a href="/mist/pages/research/research.php?genre=<?php echo $genres[$counter]; ?>">
             <div class="gamecard" 
             style="background-image: url('assets/categories-img/bg/bg-<?php echo $counter; ?>.jpg')"
             data-aos="zoom-in" 

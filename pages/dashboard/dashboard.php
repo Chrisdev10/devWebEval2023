@@ -34,6 +34,10 @@
             <div class="order-list p-2 pt-4">
                 <h2 class="title">Liste de commandes</h2>
                 <div class="order">
+                    <div class="thead">
+                        <span>Titre</span>
+                        <span>Clé</span>
+                    </div>
                     <?php
                         $games = get_all_buy_game($res['ID']);
                         if(count($games) > 0){

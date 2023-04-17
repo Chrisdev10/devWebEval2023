@@ -1,7 +1,8 @@
 (function() {
   var btn = document.getElementById('buy');
-  var btn2 = document.getElementById('connect');
-  if(user_id === ""){
+  var btn2 = document.getElementById('connecter');
+  console.log(user_id);
+  if(user_id == ''){
     btn2.style.display = 'block';
   }else{
     btn.style.display = 'block';

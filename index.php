@@ -5,6 +5,7 @@
     <body style="background-color: #333333">
         <?php include 'component/navbar/navbar.php' ?>
         <?php include 'component/header/header.html' ?>
+        <?php include 'component/caroussel/caroussel.php' ?>
         <?php include 'component/game_card/game-card.php'?>
         <?php include 'component/banner1/banner1.php'?>
         <?php include 'component/category-card/category-card.php'?>
@@ -20,6 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/mist/component/navbar/navbar.js"></script>    
+    <script src="/mist/component/caroussel/caroussel.js"></script>    
     <script>
     AOS.init();
     </script>  

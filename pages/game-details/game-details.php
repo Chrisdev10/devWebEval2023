@@ -37,7 +37,7 @@
         
         <div class="d-flex justify-content-center">
             <button class="button" id="buy">Buy now</button>
-            <button class="button" id="connect">Se connecter</button>
+            <button class="button" id="connecter">Se connecter</button>
         </div>
     </div>
         <?php include '../../component/footer/footer.html' ?>

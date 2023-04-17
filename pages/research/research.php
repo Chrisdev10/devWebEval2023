@@ -22,7 +22,7 @@
     <head>
     <body style="background-color: #333333">
     <?php include '../../component/navbar/navbar.php' ?>
-    <h3 class="main-title">Rechercher</h3>
+    <h3 class="main-title">Résultat</h3>
         <section class="promo">
         <?php  foreach($res as $row) { 
             $promo = $row['PROMOTION'];
