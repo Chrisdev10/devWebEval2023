@@ -8,7 +8,7 @@
         $promo = $row['PROMOTION'];   ?>
     <div class="center-card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <a href="/mist/pages/game-details/game-details.php?id=<?php echo $row['ID']; ?>">
-            <div class="main-card" style="background-image: url('<?php echo $row['IMAGEURL']; ?>')">
+            <div class="main-card" style="background-image: url('/mist/assets/games/icon/<?php echo $row['IMAGEURL']; ?>')">
                 <?php if($promo != 0){ ?>
                 <div class="promo-icon">
                     <p class="promo-icon-p">-<?php echo $promo; ?>%</p>

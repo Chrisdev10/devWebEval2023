@@ -1,3 +1,4 @@
+@use '../../styles/global' as c;
 .details{
     margin-top: 170px;
     padding: 2%;
@@ -10,16 +11,44 @@
     margin-left: auto;
     margin-right: auto;
 }
-
+.promoImg{
+    background: url('../../assets/deal.png');
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 150;
+    right: -20;
+    background-position: center;
+    background-size: contain;
+}
 li{
     list-style-type: circle;
 }
-
 .affiche{
-    font-style: italic;
-    opacity: 50%;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
 }
-
+.currentPrice{
+    text-decoration: line-through;
+    font-size: 3rem;
+    font-weight: bold;
+    color: c.$violet-blue;
+}
+.nopromo{
+    font-size: 3rem;
+    font-weight: bold;
+    color: c.$violet-blue;
+}
+.soldePrice{
+    font-size: 2rem;
+    font-weight: bold;
+    color: c.$pink;
+}
+.promotion{
+    font-size: 2rem;
+    font-weight: bold;
+}
 .img{
     width: 350px;
     height: 350px;
@@ -28,15 +57,29 @@ li{
 }
 
 .right{
-    margin-left: 5%;
-    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 290px;
+    width: 350px;
+    padding: 10px;
     margin-top: 28px;
-    box-shadow: 15px 15px 15px black;
     border-radius: 15px;
     background-color: rgb(51,51,51, 0.9);
     & > h2{
         text-align: center;
-        margin-bottom: 3rem;
+        background-color: c.$dark-grey;
+        position: absolute;
+        top: 0;
+        padding: 14px;
+        border-radius: 15px 15px 0 0;
+        left: 0;
+        right: 0;
+    }
+    & > div{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -50,24 +93,47 @@ li{
     cursor: pointer;
 }
 
-.button{
-    display: none;
+.buttonbuy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-decoration: none;
     background-color : rgb(141, 44, 221);
     color: white;
-    padding: 5px;
-    margin: 3px;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
     border: 0px;
+    padding: 10px;
+    bottom: -50px;
+    height: 60px;
+    left: 0;
     transition-duration: 0.3s;
     &:hover{
         background-color: #F40099;
+        box-shadow: 0 0px 15px c.$violet-blue;
         color: white;
     }
 }
-
+.infoGame{
+    display: flex;
+    flex-direction: column;
+    background-color: c.$dark-grey;
+    width: 90%;
+    margin: 3rem auto 0 auto;
+    border-radius: 15px;
+    & > h2{
+        width: 80% !important;
+        margin: 2rem auto;
+    }
+    & > ul{
+        color: white;
+    }
+}
 .gameBg {
     width: 100vw;
     background-size: cover;
+    background-position: center;
     height: 30vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);

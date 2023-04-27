@@ -11,6 +11,20 @@
   margin: 0 auto;
 }
 
+.infop {
+  display: flex;
+  width: 90% !important;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  background-color: #333333;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
 .sign {
   color: white !important;
   position: relative;
@@ -78,6 +92,9 @@
 @media (max-width: 500px) {
   .searchbar {
     width: 90%;
+  }
+  .infop {
+    flex-direction: column;
   }
 }
 #service-banner {

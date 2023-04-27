@@ -12,6 +12,19 @@ $pink: #F40099;
     border-radius: 15px;
     margin: 0 auto;
 }
+.infop{
+    display: flex;
+    width: 90% !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title{
+    background-color: $light-grey;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
 .sign{
     color: white !important;
     position: relative;
@@ -87,5 +100,8 @@ $pink: #F40099;
 @media(max-width:500px){
     .searchbar{
         width: 90%;
+    }
+    .infop{
+        flex-direction: column;
     }
 }

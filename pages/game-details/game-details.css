@@ -1,3 +1,99 @@
+/* COLORS */
+.searchbar {
+  width: 322px;
+  height: 38px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.infop {
+  display: flex;
+  width: 90% !important;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  background-color: #333333;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+.sign {
+  color: white !important;
+  position: relative;
+  border-radius: 10px;
+  background-color: #292929;
+  box-shadow: -2px 2px 20px 2px #F40099;
+  padding: 2rem;
+  margin: 200px auto;
+  max-width: 550px;
+}
+.sign::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background-color: #8D2CDD;
+  bottom: -20px;
+  left: -20px;
+  transition: all 0.5s ease-in-out;
+}
+.sign::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #F40099;
+  bottom: -10px;
+  left: -10px;
+  transition: all 0.5s ease-in-out;
+}
+.sign:hover::before {
+  bottom: -40px;
+  left: -40px;
+}
+.sign:hover::after {
+  bottom: -20px;
+  left: -20px;
+}
+
+@media (max-width: 600px) {
+  .sign {
+    width: 90%;
+  }
+  .sign::before {
+    left: 0;
+    bottom: -20px;
+  }
+  .sign::after {
+    left: 0;
+    bottom: -10px;
+  }
+  .sign:hover::before {
+    left: 0;
+    bottom: -20px;
+  }
+  .sign:hover::after {
+    left: 0;
+    bottom: -10px;
+  }
+}
+@media (max-width: 500px) {
+  .searchbar {
+    width: 90%;
+  }
+  .infop {
+    flex-direction: column;
+  }
+}
 .details {
   margin-top: 170px;
   padding: 2%;
@@ -11,13 +107,49 @@
   margin-right: auto;
 }
 
+.promoImg {
+  background: url("../../assets/deal.png");
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 150;
+  right: -20;
+  background-position: center;
+  background-size: contain;
+}
+
 li {
   list-style-type: circle;
 }
 
 .affiche {
-  font-style: italic;
-  opacity: 50%;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bold;
+}
+
+.currentPrice {
+  text-decoration: line-through;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #8D2CDD;
+}
+
+.nopromo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #8D2CDD;
+}
+
+.soldePrice {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #F40099;
+}
+
+.promotion {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .img {
@@ -28,16 +160,30 @@ li {
 }
 
 .right {
-  margin-left: 5%;
-  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 290px;
+  width: 350px;
+  padding: 10px;
   margin-top: 28px;
-  box-shadow: 15px 15px 15px black;
   border-radius: 15px;
   background-color: rgba(51, 51, 51, 0.9);
 }
 .right > h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  background-color: #292929;
+  position: absolute;
+  top: 0;
+  padding: 14px;
+  border-radius: 15px 15px 0 0;
+  left: 0;
+  right: 0;
+}
+.right > div {
+  display: flex;
+  flex-direction: column;
 }
 
 .links {
@@ -50,24 +196,49 @@ li {
   cursor: pointer;
 }
 
-.button {
-  display: none;
+.buttonbuy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-decoration: none;
   background-color: rgb(141, 44, 221);
   color: white;
-  padding: 5px;
-  margin: 3px;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
   border: 0px;
+  padding: 10px;
+  bottom: -50px;
+  height: 60px;
+  left: 0;
   transition-duration: 0.3s;
 }
-.button:hover {
+.buttonbuy:hover {
   background-color: #F40099;
+  box-shadow: 0 0px 15px #8D2CDD;
+  color: white;
+}
+
+.infoGame {
+  display: flex;
+  flex-direction: column;
+  background-color: #292929;
+  width: 90%;
+  margin: 3rem auto 0 auto;
+  border-radius: 15px;
+}
+.infoGame > h2 {
+  width: 80% !important;
+  margin: 2rem auto;
+}
+.infoGame > ul {
   color: white;
 }
 
 .gameBg {
   width: 100vw;
   background-size: cover;
+  background-position: center;
   height: 30vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);

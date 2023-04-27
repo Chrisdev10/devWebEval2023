@@ -7,8 +7,9 @@
     <div id="carousselID" class="caroussel">
     <?php  foreach($res as $row) { 
     ?>
-    <div style="background-image: url('<?php echo $row['IMAGEURL']; ?>')"></div>
-
+    <a href="/mist/pages/game-details/game-details.php?id=<?php echo $row['ID']; ?>">
+    <div style="background-image: url('/mist/assets/games/icon/<?php echo $row['IMAGEURL']; ?>')"></div>
+    </a>
     <?php } ?>
     </div>
     <div class="switcher">
