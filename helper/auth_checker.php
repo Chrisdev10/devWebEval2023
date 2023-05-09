@@ -3,6 +3,7 @@
     if(isset($_GET['id'])){
         session_start();
         $_SESSION['user_id'] = null;
+        $_SESSION['user_idd'] = null;
         header("Location: /mist/index.php");
         exit();
     }
@@ -12,6 +13,7 @@
     if(isset($res)){
         session_start();
         $_SESSION['user_id'] = $res['USERNAME'];
+        $_SESSION['user_idd'] = $res['ID'];
         header("Location: /mist/pages/dashboard/dashboard.php");
         exit();
     }else{

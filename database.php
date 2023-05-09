@@ -13,6 +13,16 @@
         $stmt = db2_prepare($conn, $sql);
         db2_execute($stmt, array('000010'));
     }
+    function add_comment($user, $game, $comment, $score){
+        $sql = "INSERT INTO GAME_COMMENT (userid, gameid, comment, score) values ('".$user."', '".$game."', '".$comment."', '".$score."')";
+        $conn = connect_to_db();
+        $stmt = db2_prepare($conn, $sql);
+        db2_execute($stmt, array('000010'));
+    }
+    function get_comment_by_game($game){
+        $sql = "SELECT * FROM GAME_COMMENT as g INNER JOIN user as u  on u.id = g.userid WHERE g.gameid = ".$game." ORDER BY g.ID DESC LIMIT 6";
+        return execute_query($sql);
+    }
     function search_game($criteria){
         $sql = "SELECT * FROM game as g WHERE lower(g.title) LIKE lower('%".$criteria."%')";
         return execute_query($sql);

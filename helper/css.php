@@ -5,6 +5,7 @@
       <link rel="stylesheet" href="/mist/component/header/header.css">
       <link rel="stylesheet" href="/mist/component/caroussel/caroussel.css">
       <link rel="stylesheet" href="/mist/component/navbar/navbar.css">  
+      <link rel="stylesheet" href="/mist/component/rate/rate.css">  
       <link rel="stylesheet" href="/mist/component/game_card/game-card.css"> 
       <link rel="stylesheet" href="/mist/pages/game-details/game-details.css"> 
       <link rel="stylesheet" href="/mist/component/banner1/banner1.css">
