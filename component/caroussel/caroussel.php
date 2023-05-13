@@ -8,7 +8,7 @@
     <?php  foreach($res as $row) { 
     ?>
     <a href="/mist/pages/game-details/game-details.php?id=<?php echo $row['ID']; ?>">
-    <div style="background-image: url('/mist/assets/games/icon/<?php echo $row['IMAGEURL']; ?>')"></div>
+    <div style="border-radius:5px;background-image: url('/mist/assets/games/icon/<?php echo $row['IMAGEURL']; ?>')"></div>
     </a>
     <?php } ?>
     </div>

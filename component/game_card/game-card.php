@@ -2,7 +2,7 @@
     require_once('database.php');
     $res = get_promotion_games();  
 ?>
-<h3 class="main-title">Jeux du moment</h3>
+<h3 class="main-title">Promotions</h3>
 <section class="promo">
     <?php  foreach($res as $row) { 
         $promo = $row['PROMOTION'];   ?>

@@ -13,6 +13,6 @@
       <link rel="stylesheet" href="/mist/component/banner3/banner3.css">
       <link rel="stylesheet" href="/mist/component/category-card/category-card.css">
       <link rel="stylesheet" href="/mist/component/footer/footer.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="/mist/styles/bootstrap.min.css">
+      <link href="/mist/styles/aos.css" rel="stylesheet">
 </head>
